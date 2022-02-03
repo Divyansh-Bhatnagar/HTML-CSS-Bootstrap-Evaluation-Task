@@ -1,0 +1,228 @@
+body {
+  background-color: #eeeff6;
+  font-family: "Lato", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 10pt;
+}
+
+.parent-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.sidebar {
+  border-radius: 6px 10px 10px 6px;
+  height: 125vh;
+  width: 270px;
+  /* position: fixed; */
+  z-index: 1;
+  /* top: 0;
+  left: 0; */
+  background-color: #172b9f;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-inline-start: 50px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #eeeff6;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f42879;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+.height {
+  height: 100px;
+}
+.form {
+  position: relative;
+}
+
+.form .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #9ca3af;
+}
+
+.ulcl {
+  list-style-type: none;
+  margin: 0;
+  margin-top: -6.5%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #eeeff6;
+}
+
+li {
+  list-style-type: none;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #363565;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(255, 255, 255);
+}
+
+#chartdiv {
+  width: 100%;
+  height: 400px;
+  box-shadow: 10px 10px 15px #aaaaaa;
+  border-radius: 10px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.insight {
+  display: flex;
+  flex-grow: 0.3;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px #aaaaaa;
+}
+
+.mycard {
+  float: right;
+  display: flex;
+  flex: 0.6;
+  flex-direction: column;
+  height: 100%;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px #aaaaaa;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonplus {
+  margin: 20px;
+  padding: 0.6em 1em;
+  border: 0;
+  color: #fff;
+  background-color: #f42879;
+  border-radius: 15px;
+}
+.buttonplus:hover {
+  background-color: #f38cb5;
+}
+.buttonarrow {
+  margin: 40px;
+  padding: 0.6em 1em;
+  border: 0;
+  color: #fff;
+  background-color: #f42879;
+  border-radius: 15px;
+}
+.buttonarrow:hover {
+  background-color: #f38cb5;
+}
+.cardimg {
+  display: flex;
+  justify-content: center;
+  height: 190px;
+}
+.l-trans {
+  margin-right: -20px;
+}
+
+.border {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button {
+  margin: 10px;
+  padding: 0.3em 2em;
+  border: 0;
+  color: #fff;
+  background-color: #f42879;
+  border-radius: 15px;
+}
+.button:hover {
+  background-color: #f38cb5;
+}
+
+@media only screen and (min-width: 768px) {
+  .ulcl,
+  .mycard .navbar-brand.abs {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}
+
+@media screen and (max-height: 1024px) {
+  .sidebar {
+    padding-top: 15px;
+    width: auto;
+    text-align: center;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+    width: auto;
+    text-align: center;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

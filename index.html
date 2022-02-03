@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/dataviz.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="parent-main">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="logo.png" height="100px" width="100px" />
+        </div>
+        <div class="d-flex flex-column align-items-center m-3">
+          <ul class="align-items-baseline d-flex flex-column">
+            <li>
+              <a href="#"
+                ><i class="fa fa-fw fa-home" style="color: #f42879"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-exchange" style="color: #f42879"></i>
+                Transactions</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-fw fa-credit-card-alt"
+                  style="color: #f42879"
+                ></i>
+                Cards</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-percent" style="color: #f42879"></i> Offers</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-bank" style="color: #f42879"></i> Investment</a
+              >
+            </li>
+          </ul>
+          <span style="margin-top: 400px">
+            <a href="#"
+              ><i class="fa fa-sign-out" style="color: #f42879"></i> Logout</a
+            >
+          </span>
+        </div>
+      </div>
+      <div class="page-container p-4">
+        <div class="header">
+          <!--search-box-->
+          <div
+            class="align-items-center d-flex p-3"
+            style="
+              width: 1118px;
+              height: 50px;
+              background: white;
+              border-radius: 20px;
+              box-shadow: 10px 10px 15px #aaaaaa;
+            "
+          >
+            <i class="fa fa-search mx-3"></i>
+            <input
+              type="text"
+              class="form-control form-input"
+              placeholder="Search Transactions, Offers, Investments, etc..."
+              style="width: 50%; border: 0"
+            />
+          </div>
+          <!--Menu-->
+          <div>
+            <ul class="ulcl d-flex align-items-center" style="float: right">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Help</a></li>
+              <li><i class="fa fa-bell"></i></li>
+              <li>
+                <div class="d-flex flex-column align-content-center">
+                  <img src="sidelogo.png" height="30px" width="30px" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Card-->
+        <div class="main-content mt-5 d-flex justify-content-evenly">
+          <div class="insight d-flex gap-3">
+            <div class="intro">
+              <div>
+                <img
+                  src="lady.png"
+                  alt="lady-with-laptop"
+                  style="height: 220px; width: 350px"
+                />
+              </div>
+              <div style="margin-top: 35px">
+                <h2
+                  style="display: flex; color: #363565; justify-content: center"
+                >
+                  Live Life Confidentaly
+                </h2>
+                <p style="display: flex; justify-content: center">
+                  Chase yours dreams and finish yours plans by spending money in
+                  insurance
+                </p>
+                <button class="button" type="submit" style="margin-left: 130px">
+                  Explore Insurance
+                </button>
+              </div>
+            </div>
+
+            <div class="linegraph d-flex justify-content-evenly">
+              <div
+                class="d-flex"
+                style="
+                  height: 150px;
+                  width: 250px;
+                  background-color: #fff;
+                  margin-top: 10px;
+                  margin-left: 10px;
+                  box-shadow: 10px 10px 15px #aaaaaa;
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="c1.png"
+                  alt="chart1"
+                  style="width: 120px; height: 120px"
+                />
+                <div class="d-flex flex-column justify-content-center">
+                  <label style="padding-left: 15px; color: grey">Deposit</label>
+                  <label style="padding-left: 15px"> $ 58789.78</label>
+                </div>
+              </div>
+              <div
+                class="d-flex"
+                style="
+                  height: 150px;
+                  width: 250px;
+                  background-color: #fff;
+                  margin-top: 10px;
+                  margin-left: 10px;
+                  box-shadow: 10px 10px 15px #aaaaaa;
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="c2.png"
+                  alt="chart1"
+                  style="width: 120px; height: 120px; margin-top: 10px"
+                />
+                <div class="d-flex flex-column justify-content-center">
+                  <label style="padding-left: 15px; color: grey">Deposit</label>
+                  <label style="padding-left: 15px"> $ 49780.78</label>
+                </div>
+              </div>
+              <div
+                class="d-flex"
+                style="
+                  height: 150px;
+                  width: 250px;
+                  background-color: #fff;
+                  margin-top: 10px;
+                  margin-left: 10px;
+                  box-shadow: 10px 10px 15px #aaaaaa;
+                  border-radius: 10px;
+                "
+              >
+                <img
+                  src="c3.png"
+                  alt="chart1"
+                  style="width: 120px; height: 120px; margin-top: 10px"
+                />
+                <div class="d-flex flex-column justify-content-center">
+                  <label style="color: grey; padding-left: 15px">Deposit</label>
+                  <div style="padding-left: 15px">
+                    <label> $ 46344.78</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bargraph">
+              <div style="margin-bottom: 50px">
+                <label
+                  style="
+                    color: grey;
+                    font-size: medium;
+                    margin-top: 15px;
+                    margin-left: 10px;
+                    font-size: 15pt;
+                  "
+                  >Cash Flow</label
+                >
+                <!-- <div
+                  style="
+                    height: 10px;
+                    width: 10px;
+                    margin-left: 2px;
+                    padding-left: 9px;
+                  "
+                >
+                  <p style="background-color: #902c2d; margin-left: 10px">
+                    Received
+                  </p>
+                  <p style="background-color: #283250">Spend</p>
+                </div> -->
+              </div>
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+          <div class="mycard">
+            <div class="card-main">
+              <div class="label">
+                <p style="color: grey; padding: 10px; margin: 10px">My Card</p>
+                <button class="buttonplus">
+                  <i class="fa fa-plus fa-1x"></i>
+                </button>
+              </div>
+              <div class="cardimg">
+                <img src="card.png" alt="card image" />
+              </div>
+              <div class="l-trans">
+                <div class="label">
+                  <p style="color: grey; padding: 10px; margin: 10px">
+                    Latest Transactions
+                  </p>
+                  <button class="buttonarrow">
+                    <i class="fa fa-arrow-right fa-1x"></i>
+                  </button>
+                </div>
+                <div class="d-flex flex-column m-3">
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i
+                        class="fa fas fa-shopping-basket"
+                        style="color: #f42879"
+                      ></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>Supreme Shirt</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #f42879"> - 15,00 $ </label>
+                    <label> > </label>
+                  </div>
+
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i class="fa fas fa-cc-visa" style="color: #f42879"></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>Salary</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #35bb84"> + 249,69 $ </label>
+                    <label> > </label>
+                  </div>
+
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i class="fa fas fa-medkit" style="color: #f42879"></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>Medical Checkup</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #f42879"> - 39,50 $ </label>
+                    <label> > </label>
+                  </div>
+
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i class="fa fa-cutlery" style="color: #f42879"></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>PizzaHot</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #f42879"> - 6,00 $ </label>
+                    <label> > </label>
+                  </div>
+
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i class="fa fas fa-train" style="color: #f42879"></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>Supreme Shirt</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #f42879"> - 15,00 $ </label>
+                    <label> > </label>
+                  </div>
+
+                  <div
+                    class="d-flex flex-row justify-content-evenly align-items-center m-2 p-2"
+                  >
+                    <span
+                      class="border"
+                      style="margin: -5px; margin-inline-end: 10px"
+                    >
+                      <i class="fa fas fa-cc-visa" style="color: #f42879"></i>
+                    </span>
+                    <div class="d-flex flex-column">
+                      <label>Capital One</label>
+                      <label>11nov,2020 11:00 pm</label>
+                    </div>
+                    <label style="color: #35bb84"> - 1300,00 $ </label>
+                    <label> > </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Apply chart themes
+    am4core.useTheme(am4themes_animated);
+    am4core.useTheme(am4themes_dataviz);
+
+    // Create chart instance
+    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+    // Add data
+    chart.data = [
+      {
+        country: "1",
+        Spend: 3012,
+        Received: 2200,
+      },
+      {
+        country: "2",
+        Spend: 1100,
+        Received: 510,
+      },
+      {
+        country: "3",
+        Spend: 3865,
+        Received: 4000,
+      },
+      {
+        country: "4",
+        Spend: 165.8,
+        Received: 1520,
+      },
+      {
+        country: "5",
+        Spend: 249.9,
+        Received: 250,
+      },
+      {
+        country: "6",
+        Spend: 3600.3,
+        Received: 1200,
+      },
+      {
+        country: "7",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "8",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "9",
+        Spend: 900,
+        Received: 0,
+      },
+      {
+        country: "10",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "11",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "12",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "13",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "14",
+        Spend: 2000,
+        Received: 1800,
+      },
+      {
+        country: "15",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "16",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "17",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "18",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "19",
+        Spend: 2000,
+        Received: 702,
+      },
+      {
+        country: "20",
+        Spend: 150,
+        Received: 142,
+      },
+      {
+        country: "21",
+        Spend: 2150,
+        Received: 2242,
+      },
+      {
+        country: "22",
+        Spend: 2000,
+        Received: 2042,
+      },
+      {
+        country: "23",
+        Spend: 1200,
+        Received: 2442,
+      },
+      {
+        country: "24",
+        Spend: 3250,
+        Received: 242,
+      },
+      {
+        country: "25",
+        Spend: 580,
+        Received: 1242,
+      },
+      {
+        country: "26",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "27",
+        Spend: 0,
+        Received: 3942,
+      },
+      {
+        country: "28",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "29",
+        Spend: 0,
+        Received: 0,
+      },
+      {
+        country: "30",
+        Spend: 3450,
+        Received: 1242,
+      },
+      {
+        country: "31",
+        Spend: 450,
+        Received: 0,
+      },
+    ];
+
+    // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "country";
+    categoryAxis.title.text = "Days";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 20;
+
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.title.text = "Amount (M)";
+
+    // Create series
+    var series = chart.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = "Spend";
+    series.dataFields.categoryX = "country";
+    series.name = "Spend";
+    series.tooltipText = "{name}: [bold]{valueY}[/]";
+    series.stacked = true;
+
+    var series2 = chart.series.push(new am4charts.ColumnSeries());
+    series2.dataFields.valueY = "Received";
+    series2.dataFields.categoryX = "country";
+    series2.name = "Received";
+    series2.tooltipText = "{name}: [bold]{valueY}[/]";
+    series2.stacked = true;
+
+    // Add cursor
+    chart.cursor = new am4charts.XYCursor();
+  </script>
+</html>
